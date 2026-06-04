@@ -2,7 +2,18 @@
 
 A documentation-first case study for automated server validation, update checks, hardware inventory and report generation workflows.
 
-This repository does not publish internal scripts or company-specific logic. It uses high-level architecture and sanitized examples only.
+This repository does not publish internal scripts or company-specific logic. It uses high-level architecture, sanitized examples and safe read-only demo scripts only.
+
+## Safe demo script
+
+```bash
+chmod +x scripts/server_validation_snapshot.sh
+./scripts/server_validation_snapshot.sh
+```
+
+The script collects basic system information and writes a Markdown report under `reports/`.
+
+It does not apply firmware updates, clear logs, reset management controllers or run destructive tests.
 
 ## What this case study covers
 
@@ -11,20 +22,10 @@ This repository does not publish internal scripts or company-specific logic. It 
 - Offline-first repository concept
 - Quick proof hardware validation
 - Log evidence capture and cleanup concept
-- TSR/support bundle concept
+- Support bundle concept
 - HTML report portal concept
 - Technician-readable output design
 
-## Why it matters
-
-Server validation requires repeatable decisions and clean documentation. A technician should be able to boot a tool, see hardware identity, run validation and produce evidence without manually stitching together logs.
-
 ## Technology focus
 
-- Linux automation
-- Dell-style server lifecycle concepts
-- Hardware inventory
-- Firmware/update workflow design
-- Burn-in/proof-test workflow
-- Report generation
-- Operational safety design
+Linux automation, enterprise server lifecycle concepts, hardware inventory, firmware/update workflow design, proof-test workflow design, report generation and operational safety design.
