@@ -1,27 +1,21 @@
-# Environment and secrets
+# Secrets
 .env
 .env.*
-!.env.example
 *secret*
 *token*
 *password*
 *.key
 *.pem
 
-# Python
+# Python/Linux output
 __pycache__/
 *.py[cod]
-.venv/
-venv/
-
-# Build / output
-dist/
-build/
-output/
 reports/
 logs/
 *.log
 *.tmp
+*.xlsx
+*.pdf
 
 # Editor / OS
 .vscode/
