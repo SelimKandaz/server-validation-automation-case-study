@@ -1,12 +1,10 @@
 # Server Validation Automation Case Study
 
-An open-source case study and safe toolset for server validation workflows, hardware inventory and report generation.
+A write-up of how I approach server validation: hardware check-in, firmware update decisions, quick proof testing, evidence capture, and technician-readable reports. It comes with two small read-only scripts.
 
-This repository does not publish destructive update/reset workflows. It includes high-level architecture, sanitized examples and safe read-only demo scripts.
+## Scripts
 
-## Safe demo scripts
-
-Linux local snapshot:
+Linux snapshot:
 
 ```bash
 chmod +x scripts/server_validation_snapshot.sh
@@ -19,25 +17,9 @@ Redfish drive serial probe:
 python scripts/redfish_drive_serial_probe.py
 ```
 
-The scripts are read-only. They do not apply firmware updates, clear logs, reset management controllers or run destructive tests.
+Both are read-only. They don't update firmware, clear logs, or reset anything.
 
-## What this case study covers
-
-- Server hardware check-in workflow
-- Firmware/update decision flow
-- Offline-first repository concept
-- Quick proof hardware validation
-- Log evidence capture and cleanup concept
-- Support bundle concept
-- HTML report portal concept
-- Technician-readable output design
-
-## Do not commit
-
-- Real BMC/iDRAC/iLO credentials
-- Real generated reports
-- Real service tags
-- Private inventory data
+See also [CNServerOps](https://github.com/SelimKandaz/CNServerOps).
 
 ## License
 
